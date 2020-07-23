@@ -1,0 +1,20 @@
+{
+  "name": "20-node-review",
+  "version": "1.0.0",
+  "description": "```bash\r git init \r git remote add origin 깃주소",
+  "main": "index.js",
+  "scripts": {
+    "start" : "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gotaeyoun/20.node-review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gotaeyoun/20.node-review/issues"
+  },
+  "homepage": "https://github.com/Gotaeyoun/20.node-review#readme"
+}
