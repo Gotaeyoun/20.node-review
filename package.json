@@ -4,7 +4,7 @@
   "description": "```bash\r git init \r git remote add origin 깃주소",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon app"
+    "start": "nodemon app"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Gotaeyoun/20.node-review/issues"
   },
-  "homepage": "https://github.com/Gotaeyoun/20.node-review#readme"
+  "homepage": "https://github.com/Gotaeyoun/20.node-review#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "pug": "^3.0.0"
+  }
 }

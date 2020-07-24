@@ -1,8 +1,24 @@
 # node[express] 프로젝트 설정
+
+## 0. node를 개발하기 위해 필요한 설정 (한번만)
+```bash
+# nodejs.org에서 LTS버전을 다운로드 하여 설치한다.
+# bitnami에서 WAMP(osx: MAMP)를 다운로드 하여 설치
+# 아래의 모듈을 --global / -g 를 통하여 설치
+npm i -g firebase-tools			# firebase init/serve/deploy 등의 명령이 담긴 app
+npm i -g nodemon						# 개발시 node app 명령(서버 실행)을 자동으로 재시작 해준다.
+npm i -g supervisor					# 상동 
+npm i -g pm2								# 상동 - 실제 서비스할때 app.js를 실행하는 모듈
+npm i -g express-cli				# express 프로젝트를 쉽게 만들어 줌.
+npm i -g sequlize-cli				#	sequlize 프로젝트를 쉽게 만들어 줌.
+```
+
+
 ## 1. 프로젝트 시작하기
 ```bash
 git init 
 git remote add origin 깃주소
+# .gitigonre파일을 생성 및 내용추가 F1 > add gitignore >node, visualstdio code
 
 # npm init -y를 실행하여 package.json을 생성
 npm init -y
@@ -23,29 +39,29 @@ npm i mysql2 			#데이터베이스에 접속과 명령(쿼리)을 수행하는 
 
 npm i multer			#파일 업로드를 처리해주는 모듈
 npm morgan				#logger(사용자가 서버에 접속하여 사용한 모든 행위를 기록)
+npm uuid 					#난수 발생
+npm passport			#로그인/로그아웃을 쉽게 해주는 모듈
+npm passport-local
+npm passport-kakao
+npm sequelize			#Database ORM(Object Relational mapping)
+npm Mongoose			#MongoDB의 접속과 명령(쿼리)을 수행하는 모듈
 ```
 
-## 3. 용어정리
-1. ERP - Enterprise Resource Planning(전사적 자원 관리)
-2. Deep(Marcine) Learning - AI를 위한 컴퓨터의 학습
-3. Big Data 
-4. AI - artificial intelligence(인공지능)
-5. CRM - Customer RelationShip management
-6. MRP - Meterial requirements planning(자재소요계획)
+## 3. 프로젝트 코딩
+### 생성할 폴더
+1. public > img, css, js, html
+2. views > include, layout, page...
+3. routers 
+4. modules 
 
+### 생성할 파일
+1. /				>app.js , .env
+2. /modules > mysql-mod.js ...
+3. /router  > board-router.js ...
+4. /views/layout > default.layout.pug
+5. /views/include > head.inc.pug, header.inc.pug, footer.inc.pug ...
 
-## 4. 웹용어
-1. browser - Internet에 접속하기위한 Application
-2. Application(App) - 응용프로그램
-3. url - Uniform Resource Locator
+### app.js 코딩
+```js
 
-	 ![URL 체계도](./public/img/url.jpg)
-
-	 [URL 체계도 링크](https://nodejs.org/dist/latest-v12.x/docs/api/url.html)
-
-4. href - hyperlink refernce
-5. protocol - 규약/규칙
-6. http - hyper text transfer protocal(port: 80)
-7. https - hyper text transfer protocal secure(port: 443)
-8. host - 컴퓨터의 IP/Domain
-9. host - hostname: port(생략가능)
+```
