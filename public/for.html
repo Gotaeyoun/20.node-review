@@ -1,0 +1,36 @@
+<script>
+	var users=[
+		{id:1, name:"김태희" ,age:24},
+		{id:2, name:"장동건" ,age:42},
+		{id:3, name:"정우성" ,age:34},
+		{id:4, name:"원빈" ,age:60}
+	]
+	for( var i in users){
+		users[i].age += 10;
+	}
+	console.log(users);
+	for( var v of users){
+		v.age += 10;
+	}
+	console.log(users);
+	users.forEach((v,i) => {
+		v.age += 10;
+	});
+	console.log(users);
+
+	var result = users.filter((v) =>{
+		return v.name == "김태희" || v.name =="장동건"
+	});
+	console.log(result);
+
+	var result2 = users.map((v) =>{
+		return v.age += 100;
+	});
+	console.log(result2);
+
+	var result3 = users.map((v) =>{
+		v.age += 100;
+		return v; 
+	});
+	console.log(result3);
+</script>
